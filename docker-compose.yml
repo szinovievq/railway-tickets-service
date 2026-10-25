@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: railway-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: railway
+      POSTGRES_USER: railway
+      POSTGRES_PASSWORD: railway
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
