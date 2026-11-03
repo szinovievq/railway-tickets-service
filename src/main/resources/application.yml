@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5432/railway}
+    url: ${DB_URL:jdbc:postgresql://localhost:5435/railway}
     username: ${DB_USER:railway}
     password: ${DB_PASSWORD:railway}
 
@@ -12,15 +12,17 @@ spring:
   flyway:
     enabled: true
 
-  jackson:
-    serialization:
-      write-dates-as-timestamps: false
-
 management:
   endpoints:
     web:
       exposure:
         include: health,info
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
 
 app:
   jwt:

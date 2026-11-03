@@ -3,7 +3,7 @@ services:
     image: postgres:16
     container_name: railway-db
     ports:
-      - "5432:5432"
+      - "5435:5432"
     environment:
       POSTGRES_DB: railway
       POSTGRES_USER: railway
